@@ -1,0 +1,1977 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+   BODY
+ */
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(253, 245, 236);
+    color: #333;
+}
+
+/* 
+   HEADER
+*/
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1c95f2a9;
+    color: white;
+}
+
+header .logo {
+    width: 180px;
+    height: 180px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px black;
+}
+
+header nav a.active {
+    border-bottom: 2px solid #fff;
+}
+
+
+/* 
+   HERO SECTION 
+*/
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background: url(DSC04846.JPG) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+    
+}
+
+/* ========================================
+   MODERN ANIMATED HERO SECTION
+======================================== */
+
+
+/* HERO */
+
+.hero {
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+/* ========================================
+   MOVING BACKGROUND
+======================================== */
+
+.hero-background {
+
+    position: absolute;
+
+    top: -5%;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 110%;
+
+
+    /* CHANGE hero.jpg TO YOUR IMAGE NAME */
+
+    background-image: url("hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+
+    animation: moveBackground 20s ease-in-out infinite alternate;
+
+    z-index: 0;
+
+}
+
+
+/* BACKGROUND MOVEMENT */
+
+@keyframes moveBackground {
+
+    0% {
+
+        transform: scale(1);
+
+        background-position: center center;
+
+    }
+
+
+    50% {
+
+        transform: scale(1.1);
+
+        background-position: 55% 45%;
+
+    }
+
+
+    100% {
+
+        transform: scale(1.15);
+
+        background-position: 45% 55%;
+
+    }
+
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.45)
+        );
+
+    z-index: 1;
+
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    max-width: 1000px;
+
+    padding: 20px;
+
+}
+
+
+/* WELCOME TEXT */
+
+.welcome-text {
+
+    font-size: 18px;
+
+    letter-spacing: 6px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    color: #f4d27a;
+
+    opacity: 0;
+
+    animation: fadeDown 1s ease forwards;
+
+}
+
+
+/* MAIN TITLE */
+
+.hero-content h1 {
+
+    font-size: clamp(45px, 7vw, 100px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    opacity: 0;
+
+    animation: fadeUp 1.2s ease forwards;
+
+    animation-delay: 0.4s;
+
+}
+
+
+/* SUBTITLE */
+
+.hero-subtitle {
+
+    font-size: clamp(18px, 2vw, 26px);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+
+    opacity: 0;
+
+    animation: fadeUp 1.2s ease forwards;
+
+    animation-delay: 0.8s;
+
+}
+
+
+.hero-subtitle span {
+
+    color: #f4d27a;
+
+    margin: 0 8px;
+
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    opacity: 0;
+
+    animation: fadeUp 1s ease forwards;
+
+    animation-delay: 1.2s;
+
+}
+
+
+.hero-btn {
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+
+    background: #f4d27a;
+
+    color: #222;
+
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+
+    border: 2px solid white;
+
+    color: white;
+
+}
+
+
+/* BUTTON HOVER */
+
+.hero-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.primary-btn:hover {
+
+    background: white;
+
+}
+
+
+.secondary-btn:hover {
+
+    background: white;
+
+    color: #222;
+
+}
+
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+
+    animation-delay: 1.8s;
+
+}
+
+
+.scroll-arrow {
+
+    font-size: 28px;
+
+    margin-top: 5px;
+
+    animation: bounce 1.5s infinite;
+
+}
+
+
+/* ========================================
+   TEXT ANIMATIONS
+======================================== */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ARROW BOUNCE */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(10px);
+
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .welcome-text {
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .hero-content h1 {
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .hero-btn {
+
+        width: 230px;
+
+    }
+
+}
+
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Keep text above overlay */
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.featured {
+    font-size: 3rem;
+    padding: 10px;
+
+}
+
+.slideshow-container img {
+    margin-left: 30px;
+    margin-right: 30px  ;
+}
+
+/*
+FEATURES
+*/
+.slideshow-container img {
+  width: 800px;
+  height: auto;
+}
+
+.featured h2 {
+    font-size: 3rem;
+    font-style: oblique;
+}
+
+.featured p {
+    font-size: 6rem;
+    font-weight: bolder;
+}
+
+
+/* 
+   SECTIONS
+ */
+main, .featured {
+    padding: 30px;
+}
+
+/* 
+   FOOTER
+ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #7b68ee;
+    color: white;
+    margin-top: 40px;
+}
+
+/* 
+   WEEKLY SERVICES SECTION
+*/
+.weekly-services {
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.weekly-services h2 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #4b0082;
+    text-shadow: 5px 5px 5px rgba(101, 92, 92, 0.21);
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Card */
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-shadow: 2px 2px 5px rgb(74, 74, 74);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+    color: #4b0082;
+    text-align: center;
+}
+
+.service-card p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+
+}
+
+.service-card .schedule {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.service-card .schedule li {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+/* =====================================
+   SERVICES PAGE
+===================================== */
+
+.services-page {
+
+    min-height: 100vh;
+
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f5f0,
+            #ffffff
+        );
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.services-header {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+
+.services-small-title {
+
+    color: #b08d57;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.services-header h1 {
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    color: #222;
+
+    margin-bottom: 20px;
+
+}
+
+
+.services-header p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================
+   SERVICES GRID
+===================================== */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================
+   SERVICE CARD
+===================================== */
+
+.service-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* TOP DECORATION */
+
+.service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b08d57,
+            #e2c08d
+        );
+
+}
+
+
+/* HOVER */
+
+.service-card:hover {
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =====================================
+   ICON
+===================================== */
+
+.service-icon {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+
+    background:
+        #f7f1e8;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.service-card:hover .service-icon {
+
+    transform:
+        rotate(8deg)
+        scale(1.1);
+
+}
+
+
+/* =====================================
+   TEXT
+===================================== */
+
+.service-card h2 {
+
+    font-size: 23px;
+
+    color: #222;
+
+    margin-bottom: 15px;
+
+}
+
+
+.service-card p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.service-btn {
+
+    border: none;
+
+    background: #222;
+
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.service-btn:hover {
+
+    background: #b08d57;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .services-page {
+
+        padding:
+            70px 20px;
+
+    }
+
+
+    .services-header {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .service-card {
+
+        padding:
+            35px 25px;
+
+    }
+
+}
+
+/* =====================================
+   FIX SERVICE CARD OVERLAPPING
+===================================== */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    align-items: stretch;
+
+}
+
+
+/* FORCE CARDS TO FIT INSIDE GRID */
+
+.service-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin: 0;
+
+    position: relative;
+
+    left: auto;
+
+    right: auto;
+
+    top: auto;
+
+    bottom: auto;
+
+    box-sizing: border-box;
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+}
+
+.sunday-service {
+    text-align: center;
+}
+
+.sunday-service h2 {
+    font-size: 60px;
+    font-style: italic;
+}
+.sunday-service {
+    text-align: center;
+}
+
+.sunday-service h2 {
+    font-size: 60px;
+    font-style: italic;
+}
+
+
+/* Slider container */
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Slider */
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+/* Images */
+
+.slider img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+
+    flex: 0 0 100%;
+
+    border-radius: 10px;
+}
+
+
+/* Arrow buttons */
+
+.arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    background-color: white;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+
+/* Left Arrow */
+
+.left-arrow {
+    left: 20px;
+}
+
+
+/* Right Arrow */
+
+.right-arrow {
+    right: 20px;
+}
+
+
+/* Hover Effect */
+
+.arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+/* 
+   MOBILE RESPONSIVE
+ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        display: inline-block;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* =====================================
+   WORD OF GOD SLIDER
+===================================== */
+
+.slider-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+/* IMAGE VIEWING AREA */
+
+.slider {
+
+    width: min(900px, 80vw);
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+}
+
+
+/* ALL SLIDES */
+
+.slider img {
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 600px;
+
+    object-fit: contain;
+
+    display: none;
+
+    border-radius: 12px;
+
+    cursor: zoom-in;
+
+}
+
+
+/* ACTIVE IMAGE */
+
+.slider img.active {
+
+    display: block;
+
+    animation: imageFade 0.5s ease;
+
+}
+
+
+/* SMOOTH FADE */
+
+@keyframes imageFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* ARROWS */
+
+.arrow {
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    flex-shrink: 0;
+
+}
+
+
+.arrow:hover {
+
+    transform: scale(1.1);
+
+    background: #f4d27a;
+
+    color: #222;
+
+}
+
+
+/* SLIDE NUMBER */
+
+.slide-counter {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* INSTRUCTION */
+
+.image-instruction {
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    opacity: 0.7;
+
+}
+
+
+/* =====================================
+   FULLSCREEN MODAL
+===================================== */
+
+.image-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 80px;
+
+}
+
+
+/* SHOW MODAL */
+
+.image-modal.show {
+
+    display: flex;
+
+}
+
+
+/* LARGE IMAGE */
+
+#modalImage {
+
+    max-width: 100%;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    animation: imageFade 0.4s ease;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 30px;
+
+    font-size: 50px;
+
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+}
+
+
+/* MODAL ARROWS */
+
+.modal-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+}
+
+
+.modal-left {
+
+    left: 20px;
+
+}
+
+
+.modal-right {
+
+    right: 20px;
+
+}
+
+
+/* MODAL COUNTER */
+
+.modal-counter {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .slider-container {
+
+        gap: 8px;
+
+    }
+
+
+    .slider {
+
+        width: 78vw;
+
+    }
+
+
+    .arrow {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 24px;
+
+    }
+
+
+    .image-modal {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .modal-arrow {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 24px;
+
+    }
+
+
+    .modal-left {
+
+        left: 5px;
+
+    }
+
+
+    .modal-right {
+
+        right: 5px;
+
+    }
+
+}
+/* =====================================
+   FEATURED + UPCOMING EVENTS LAYOUT
+===================================== */
+
+.featured-events-section {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background: #f7f5f0;
+
+}
+
+
+/* =====================================
+   ANNIVERSARY AREA - LEFT
+===================================== */
+
+.anniversary-area {
+
+    text-align: center;
+
+}
+
+
+.anniversary-area h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.anniversary-gif {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    border-radius: 20px;
+
+    display: block;
+
+    margin: auto;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =====================================
+   UPCOMING EVENTS - RIGHT
+===================================== */
+
+.upcoming-events-side {
+
+    padding: 30px;
+
+}
+
+
+.upcoming-events-side h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-small-title {
+
+    color: #b08d57;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =====================================
+   EVENTS LIST
+===================================== */
+
+.events-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+/* =====================================
+   EVENT CARD
+===================================== */
+
+.event-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.event-card:hover {
+
+    transform: translateX(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* DATE BOX */
+
+.event-date {
+
+    min-width: 70px;
+
+    height: 70px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b08d57,
+            #d4b483
+        );
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.event-month {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.event-day {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+}
+
+
+/* EVENT CONTENT */
+
+.event-content h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+
+    color: #222;
+
+}
+
+
+.event-time {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   MOBILE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .featured-events-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .upcoming-events-side {
+
+        padding: 10px;
+
+    }
+
+
+    .upcoming-events-side h2 {
+
+        text-align: center;
+
+        font-size: 36px;
+
+    }
+
+
+    .section-small-title {
+
+        text-align: center;
+
+    }
+
+}
+
+/* =====================================
+   SERVICE INFORMATION POPUP
+===================================== */
+
+.service-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 9999;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+/* SHOW MODAL */
+
+.service-modal.show {
+
+    display: flex;
+
+}
+
+
+/* MODAL BOX */
+
+.modal-content {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    animation: modalOpen 0.4s ease;
+
+}
+
+
+/* ANIMATION */
+
+@keyframes modalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px) scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* CLOSE BUTTON */
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    color: #333;
+
+}
+
+
+.close-modal:hover {
+
+    color: #b08d57;
+
+}
+
+
+/* MODAL ICON */
+
+.modal-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* TITLE */
+
+.modal-content h2 {
+
+    font-size: 32px;
+
+    color: #222;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* DESCRIPTION */
+
+.modal-content > p {
+
+    font-size: 17px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* DETAILS BOX */
+
+.modal-details {
+
+    background: #f7f5f0;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+}
+
+
+.modal-details h3 {
+
+    color: #b08d57;
+
+    margin-bottom: 10px;
+
+}
+
+
+.modal-details p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .modal-content {
+
+        padding: 35px 25px;
+
+    }
+
+}

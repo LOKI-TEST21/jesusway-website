@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="golo.png" class="logo" alt="Church Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    
+       <!-- =====================================
+     SERVICES / MINISTRIES
+===================================== -->
+
+<section class="services-page">
+
+    <!-- HEADER -->
+
+    <div class="services-header">
+
+        <p class="services-small-title">
+            OUR MINISTRIES
+        </p>
+
+        <h1>
+            Serving God, Serving People
+        </h1>
+
+        <p>
+            Discover the different ministries and programs of
+            Jesus Way Christian Church.
+        </p>
+
+    </div>
+
+
+    <!-- SERVICES CARDS -->
+
+    <div class="services-grid">
+
+
+        <!-- =====================
+             BIBLE STUDY
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📖
+            </div>
+
+            <h2>
+                Bible Study
+            </h2>
+
+            <p>
+                Grow deeper in God's Word through meaningful
+                discussions, learning, and fellowship.
+            </p>
+
+            <button class="service-btn" onclick="openService('bible')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+             COMMUNITY FEEDING
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ❤️
+            </div>
+
+            <h2>
+                Community Feeding Program
+            </h2>
+
+            <p>
+                Sharing God's love by serving meals and
+                supporting members of our community.
+            </p>
+
+            <button
+                class="service-btn"
+                onclick="openService('Community Feeding Program')">
+
+                Learn More →
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+             VISITATION MINISTRY
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🤝
+            </div>
+
+            <h2>
+                Visitation Ministry
+            </h2>
+
+            <p>
+                Reaching out to people through prayer,
+                encouragement, fellowship, and care.
+            </p>
+
+            <button
+                class="service-btn"
+                onclick="openService('Visitation Ministry')">
+
+                Learn More →
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+             YWAM
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🌍
+            </div>
+
+            <h2>
+                YWAM Collaboration
+            </h2>
+
+            <p>
+                Working together with YWAM to serve communities
+                and share God's love with others.
+            </p>
+
+            <button
+                class="service-btn"
+                onclick="openService('YWAM Collaboration')">
+
+                Learn More →
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+             CONNECT TO SOUL
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔗
+            </div>
+
+            <h2>
+                Connect to Soul
+            </h2>
+
+            <p>
+                Building meaningful connections and encouraging
+                people in their spiritual journey.
+            </p>
+
+            <button
+                class="service-btn"
+                onclick="openService('Connect to Soul')">
+
+                Learn More →
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+             CHRISTIAN LIFE DEVELOPMENT
+        ====================== -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ✨
+            </div>
+
+            <h2>
+                Christian Life Development Program
+            </h2>
+
+            <p>
+                Helping believers grow spiritually and develop
+                a stronger Christian life.
+            </p>
+
+            <button
+                class="service-btn"
+                onclick="openService('Christian Life Development Program')">
+
+                Learn More →
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+</main>
+
+<!-- SERVICE INFORMATION POPUP -->
+
+<div class="service-modal" id="serviceModal">
+
+    <div class="modal-content">
+
+        <!-- CLOSE BUTTON -->
+
+        <button
+            class="close-modal"
+            onclick="closeService()">
+
+            &times;
+
+        </button>
+
+
+        <!-- ICON -->
+
+        <div
+            class="modal-icon"
+            id="modalIcon">
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h2 id="modalTitle">
+            Service Title
+        </h2>
+
+
+        <!-- INFORMATION -->
+
+        <p id="modalDescription">
+            Service information will appear here.
+        </p>
+
+
+        <!-- ADDITIONAL INFORMATION -->
+
+        <div class="modal-details">
+
+            <h3>
+                About This Ministry
+            </h3>
+
+            <p id="modalDetails">
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- CONNECT JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+<footer>
+    &copy; 2026 Jesus Way Christian Church
+</footer>
+
+</body>
+</html>
